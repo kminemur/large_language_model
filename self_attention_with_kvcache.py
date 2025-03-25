@@ -49,10 +49,10 @@ self_attention_with_cache = SelfAttentionWithKVCache(dk)
 
 # Calculate self-attention with KV cache for 100 iterations
 start_time = time.time()
-for _ in range(100):
+for _ in range(10000):
     result = self_attention_with_cache.self_attention(Q, K, V)
 end_time = time.time()
 elapsed_time = end_time - start_time
 
-print(f"Result after 100 iterations:\n{result}")
-print(f"Elapsed time for 100 iterations: {elapsed_time} seconds")
+print(f"Result after 10000 iterations:\n{result}")
+print(f"Elapsed time for 10000 iterations: {elapsed_time} seconds")
