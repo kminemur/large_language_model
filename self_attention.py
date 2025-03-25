@@ -30,6 +30,7 @@ dk = 512
 start_time = time.time()
 for _ in range(100):
     result = self_attention(Q, K, V, dk)
+end_time = time.time()    
 elapsed_time = end_time - start_time
 
 print(f"Result after 100 iterations:\n{result}")
