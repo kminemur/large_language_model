@@ -26,5 +26,6 @@ V = np.random.rand(5, 5)
 dk = 512
 
 # Calculate self-attention
-result = self_attention(Q, K, V, dk)
+for _ in range(100):
+    result = self_attention(Q, K, V, dk)
 print(result)
