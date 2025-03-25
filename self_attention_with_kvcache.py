@@ -51,6 +51,7 @@ self_attention_with_cache = SelfAttentionWithKVCache(dk)
 start_time = time.time()
 for _ in range(100):
     result = self_attention_with_cache.self_attention(Q, K, V)
+end_time = time.time()
 elapsed_time = end_time - start_time
 
 print(f"Result after 100 iterations:\n{result}")
