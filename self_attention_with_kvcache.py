@@ -45,6 +45,8 @@ dk = 512
 # Create SelfAttentionWithKVCache instance
 self_attention_with_cache = SelfAttentionWithKVCache(dk)
 
-# Calculate self-attention with KV cache
-result = self_attention_with_cache.self_attention(Q, K, V)
+
+# Calculate self-attention with KV cache for 100 iterations
+for _ in range(100):
+    result = self_attention_with_cache.self_attention(Q, K, V)
 print(result)
