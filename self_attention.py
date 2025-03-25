@@ -1,4 +1,5 @@
 import numpy as np
+import time
 
 def softmax(x):
     exp_x = np.exp(x - np.max(x, axis=-1, keepdims=True))
@@ -26,6 +27,11 @@ V = np.random.rand(5, 5)
 dk = 512
 
 # Calculate self-attention
+start_time = time.time()
 for _ in range(100):
     result = self_attention(Q, K, V, dk)
-print(result)
+elapsed_time = end_time - start_time
+
+print(f"Result after 100 iterations:\n{result}")
+print(f"Elapsed time for 100 iterations: {elapsed_time} seconds")
+
