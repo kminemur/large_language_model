@@ -28,11 +28,11 @@ dk = 512
 
 # Calculate self-attention
 start_time = time.time()
-for _ in range(100):
+for _ in range(10000):
     result = self_attention(Q, K, V, dk)
 end_time = time.time()    
 elapsed_time = end_time - start_time
 
-print(f"Result after 100 iterations:\n{result}")
-print(f"Elapsed time for 100 iterations: {elapsed_time} seconds")
+print(f"Result after 10000 iterations:\n{result}")
+print(f"Elapsed time for 10000 iterations: {elapsed_time} seconds")
 
